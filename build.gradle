@@ -10,12 +10,7 @@
 //}
 
 plugins {
-	id "com.github.node-gradle.node" version "2.2.4" // specify version you want to use.
-	// There is something you need to care when you use version < 3. Read below
-}
-
-node {
-	nodeModulesDir = file(frontendDir) // nodeModulesDir will be changed to nodeProjectDir in 3+ version
+  id "com.github.node-gradle.node" version "7.0.1"
 }
 
 //declare a build task
