@@ -1,12 +1,21 @@
-plugins {
+//plugins {
   //inlude the nodeJS plugin to execute nodejs and npm tasks
-  id "com.moowork.node" version "1.2.0"
+// id "com.moowork.node" version "1.2.0"
+//}
+
+//node {
+//	download = true
+//	version = "9.11.1"
+//	npmVersion = "5.6.0"
+//}
+
+plugins {
+	id "com.github.node-gradle.node" version "2.2.4" // specify version you want to use.
+	// There is something you need to care when you use version < 3. Read below
 }
 
 node {
-	download = true
-	version = "9.11.1"
-	npmVersion = "5.6.0"
+	nodeModulesDir = file(frontendDir) // nodeModulesDir will be changed to nodeProjectDir in 3+ version
 }
 
 //declare a build task
